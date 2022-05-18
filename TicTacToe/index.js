@@ -14,9 +14,9 @@ window.addEventListener('DOMContentLoaded', () => {
     const playerDisplay = document.querySelector('.display-player');
     const resetButton = document.querySelector('#reset');
     const announcer = document.querySelector('.announcer');
-    const wonPlayerX = 'PLAYERX_WON';
-    const wonPlayerO = 'PLAYERO_WON';
-    const tie = 'TIE';
+    const wonPlayerX = 'player X wins';
+    const wonPlayerO = 'player O wins';
+    const tie = 'tie';
     const winningConditions = [
         [zero, one, two],
         [zero, three, six],
@@ -40,40 +40,21 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 
     drawGrid();
-
-    const tiles = Array.from(document.querySelectorAll('.tile'));
     
     let dragAndDrop = () => {
-        let card = document.querySelectorAll('.avatar-icon');
-        let cells = document.querySelectorAll('.avatar-container');
-        for (let i = 0; i < card.length; i++) {
-            let dragStart = function () {
-                setTimeout(() => {
-                    this.classList.add('hide');
-                }, 0);
-                this.classList.add('selected');
+        let card = null;
+        document.addEventListener('dragstart', event => {
+            card = event.target;
+        });
+        document.addEventListener('dragover', event => {
+            event.preventDefault();
+        });
+        document.addEventListener('drop', event => {
+            event.preventDefault();
+            if (event.target.className === 'avatar-container' && !event.target.children.length) {
+                card.parentNode.removeChild(card);
+                event.target.appendChild(card);
             }
-            let dragEnd = function () {
-                this.classList.remove('hide');
-                this.classList.remove('selected');
-            }
-            card[i].addEventListener('dragstart', dragStart);
-            card[i].addEventListener('dragend', dragEnd);
-        }
-        cells.forEach((cell) => {
-            cell.addEventListener('dragover', (event) => {
-                 event.preventDefault();
-            });
-            cell.addEventListener('dragenter', (event) => {
-                 event.preventDefault();
-            });
-            cell.addEventListener('drop', () => {
-                let drag = document.querySelector('.selected');
-                if (cell.children.length) {
-                return;
-            }
-            cell.appendChild(drag);
-            });
         });
     }
 
@@ -151,7 +132,6 @@ window.addEventListener('DOMContentLoaded', () => {
     let currCell = 0;
 
     let keyDown = (e) => {
-        e = e || window.event;
         if (e.key === 'ArrowLeft') {
             if (currCell > zero) {
                 currCell -= 1;
@@ -184,9 +164,14 @@ window.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    tiles.forEach((tile, index) => {
-        tile.addEventListener('click', () => userAction(tile, index));
-    });
+    container.onclick = function(event) {
+        let tile = event.target;
+        let index = Array.prototype.indexOf.call(this.children, event.target);
+        if (tile.className !== 'tile') {
+            return;
+        }
+        userAction(tile, index);
+    }
 
     resetButton.addEventListener('click', () => {
         document.location.reload();
