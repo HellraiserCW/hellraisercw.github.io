@@ -40,7 +40,7 @@ function fetchUsers() {
                 <p class='name'>${e.name}</p>
                 <div class='btn' id='${e.id}'>
                     <button class='edit'>Edit</button>
-                    <button class='delete'>Delete</button>
+                    <button class='delete' onclick='this.disabled=true'>Delete</button>
                 </div>
             </div>
             `
@@ -57,6 +57,7 @@ function editUser(e) {
     if (e.target.classList.contains('edit')) {
         const form = document.createElement('form');
         const input = document.createElement('input');
+        input.classList.add('input-name');
         const saveButton = document.createElement('button');
         saveButton.setAttribute('type', 'button');
         saveButton.classList.add('save-btn');
@@ -70,6 +71,7 @@ function editUser(e) {
         });
 
         saveButton.onclick = () => {
+            saveButton.disabled=true;
             const xhttp = new XMLHttpRequest();
             
             xhttp.open('PUT', `https://jsonplaceholder.typicode.com/users/${element.id}`, true);
@@ -85,6 +87,7 @@ function editUser(e) {
                     const userId = JSON.parse(this.responseText);
                     if (userId.name === '') {
                         alert('Enter new name');
+                        saveButton.disabled=false;
                     } else {
                         e.target.parentElement.previousElementSibling.innerText = userId.name;
                         e.target.parentElement.parentElement.removeChild(form);
@@ -107,7 +110,6 @@ function editUser(e) {
 document.querySelector('.fetch-container').addEventListener('click', editUser);
 
 function deleteUser(e) {
-    document.querySelector('.fetch-container').removeEventListener('click', deleteUser);
     if (e.target.classList.contains('delete')) {
         const xhttp = new XMLHttpRequest();
         xhttp.open('DELETE', `https://jsonplaceholder.typicode.com/users/${e.target.parentElement.id}`, true);
@@ -118,8 +120,8 @@ function deleteUser(e) {
             if (xhttp.status !== statusOK) {
                 alert(`Error ${xhttp.status}!`);
             } else {
-                alert(`User with id – ${e.target.parentElement.id} was deleted`);
                 e.target.parentElement.parentElement.remove();
+                alert(`User with id – ${e.target.parentElement.id} was deleted`);
             }
 
             hideLoading();
