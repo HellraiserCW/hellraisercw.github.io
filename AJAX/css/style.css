@@ -1,0 +1,76 @@
+.main {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.main > div {
+    display: flex;
+    flex-direction: column;
+}
+
+.request {
+    width: 150px;
+    height: 30px;
+    align-self: center;
+    margin: 30px 0;
+}
+
+.loading {
+    position: fixed;
+    top: 50%;
+    left: 45%;
+    width: 100px;
+    height: 30px;
+    font-size: 30px;
+}
+
+.container {
+    width: 350px;
+    height: 500px;
+    border: solid 1px black;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+}
+
+.hidden {
+    display: none;
+}
+
+.users-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1 1 auto;
+    margin: 0;
+    border: solid 1px black;
+    background-color: bisque;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.name {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+}
+
+.edit,
+.delete,
+.save-btn {
+    width: 100px;
+    height: 25px;
+    margin: 10px;
+}
+
+input {
+    height: 19px;
+    width: 140px;
+}
+
+.fetch-container {
+    overflow-y: auto;
+}
