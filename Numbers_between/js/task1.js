@@ -1,10 +1,10 @@
 (function() {
-    let a=prompt('Enter first number:', '');
+    let a=prompt('Enter two numbers.\nSmaller number:', '');
     if (!Number(a) && a!=='0') {
         alert('Invalid input data');
         return
     }
-    let b=prompt('Enter second number:', '');
+    let b=prompt('Enter two numbers.\nBigger number:', '');
     if (!Number(b) && b!=='0') {
         alert('Invalid input data');
         return
@@ -19,5 +19,5 @@
     for (i; i<b; i++) {
         result.push(i);
     }
-    alert('First number: '+a+'\nSecond number: '+b+'\n\nNumbers between: '+result.join(' '));
-})()
+    alert('First number: ' + a + '\nSecond number: ' + b + '\n\nNumbers between: ' + result.join(' '));
+})();

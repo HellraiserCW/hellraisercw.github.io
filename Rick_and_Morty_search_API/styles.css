@@ -1,0 +1,23 @@
+#root {
+    text-align: center;
+}
+
+.search-id {
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#search-btn {
+    margin: 5px;
+}
+
+.load-more {
+    margin: 5px;
+}
