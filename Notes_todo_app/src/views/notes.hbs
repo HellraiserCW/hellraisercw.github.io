@@ -1,0 +1,37 @@
+<form action="/logout" method="POST">
+  <label>
+    <button class="btn logout-btn" type="submit">Logout</button>
+  </label>
+</form>
+<h2>Notes:</h2>
+{{#if notes.length}}
+<ul>
+  {{#each notes}}
+    <li class="todo">
+      <form action="/complete" method="POST">
+        <label>
+          {{#if completed}}
+            <input type="checkbox" checked name="completed">
+            <span class="completed">{{text}}</span>
+          {{else}}
+            <input type="checkbox" name="completed">
+            <span>{{text}}</span>
+          {{/if}}
+
+          <input type="hidden" value="{{_id}}" name="id">
+          <button class="btn btn-small" type="submit">Save</button>
+        </label>
+      </form>
+      <form action="/delete" method="POST">
+        <label>
+          <input type="hidden" value="{{_id}}" name="id">
+          <button class="btn btn-small" type="submit">Delete</button>
+        </label>
+      </form>
+        
+    </li>
+  {{/each}}
+</ul>
+{{else}}
+<p>No notes yet! <a href="/create">Create one</a></p>
+{{/if}}
