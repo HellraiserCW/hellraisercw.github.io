@@ -1,0 +1,54 @@
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  margin-top: auto;
+}
+
+.nav-elements {
+  margin: 0 20px;
+}
+
+.sidenav {
+  width: 180px;
+}
+
+.btn {
+  padding:0 10px;
+  margin-bottom: 10px;
+}
+
+td {
+  max-width: 20vw;
+  word-wrap: break-word;
+}
+
+.inline-btn {
+  margin: 10px;
+}
+
+.message {
+  margin: -5px 0 0 0;
+  font-size: 0.8rem;
+  position: absolute;
+  display: block;
+}
+
+.error {
+  color: red;
+}
+
+.success {
+  color: green;
+}
+
+.hello-user {
+  margin: 0 30px;
+}
+
+.dimensions {
+  text-align: right;
+}

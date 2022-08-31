@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" href="index.css">
+  <title>Cargo service</title>
+</head>
+
+<body>
+  <nav class="blue darken-4">
+    <div class="nav-wrapper">
+      <div class="nav-elements">
+        <a href="./index.html" class="brand-logo">Cargo service</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li class="hello-user"></li>
+          <li><a href="./home.html" class="home">Back</a></li>
+          <li><a class="logout"><button class="btn">Logout</button></a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <ul id="slide-out" class="sidenav">
+    <li><a href="./home.html" class="home">Back</a></li>
+    <li><a class="logout"><button class="btn">Logout</button></a></li>
+  </ul>
+  <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons"> </i></a>
+
+  <div class="container">
+    <div class="load-info">
+      <h5>Load info</h5>
+      <p>Load ID: <span class="loadid"></span></p>
+      <p>Load name: <span class="loadname"></span></p>
+      <p>Payload, kg: <span class="payload"></span></p>
+      <p>Dimensions, cm: width <span class="width"></span><span>, length </span><span class="length"></span><span>, height <span class="height"></span></p>
+      <p>Pick-up address: <span class="pickup"></span></p>
+      <p>Delivery address: <span class="delivery"></span></p>
+      <p>Assigned to: <span class="loadassigned"></span></p>
+      <p>Load state: <span class="loadstate"></span></p>
+      <p>Load status: <span class="loadstatus"></span></p>
+      <p>Created at: <span class="loadcreated-date"></span></p>
+      <p>Logs: <span class="loadlogs"></span></p>
+    </div>
+    <div class="loadoptions">
+      <div class="updateform">
+        <h5>Update load details</h5>
+      </div>
+      <div>
+        <h5>Delete load</h5>
+        <form>
+          <button type="submit" id="" class="btn deleteload">Delete load</button>
+        </form>
+      </div>
+      <div>
+      <h5>Post a load to find a truck</h5>
+        <form>
+          <button type="submit" class="btn post">Post load</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <footer class="page-footer blue darken-4">
+      <div class="container">
+      © 2022 by Kostiantyn Sakharov
+      <a class="grey-text text-lighten-4 right" href="http://hellraisercw.github.io/">My portfolio</a>
+      </div>
+    </div>
+  </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="appLoaddetails.js"></script>
+</body>
+</html>

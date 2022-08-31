@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" href="index.css">
+  <title>Cargo service</title>
+</head>
+
+<body>
+  <nav class="blue darken-4">
+    <div class="nav-wrapper">
+      <div class="nav-elements">
+        <a href="./index.html" class="brand-logo">Cargo service</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li>
+            <button class="btn inline-btn"><a href="./register.html">Sign Up</a></button>
+          </li>
+          <li>
+            <button class="btn inline-btn"><a href="./resetpwd.html">Forgot Password</a></button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <ul id="slide-out" class="sidenav">
+    <li><a href="./register.html">Register</a></li>
+    <li><a href="./resetpwd.html">Forgot password</a></li>
+  </ul>
+  <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons"> </i></a>
+
+  <div class="container">
+    <form>
+      <h4>Log in</h4>
+      <div class="input-field">
+        <div class="row">
+          <label for="email">Email</label>
+          <div class="input-field col s12">
+            <input type="email" name="email" id="email" placeholder="Enter your email" required>
+          </div>
+        </div>
+        <div class="row">
+          <label for="password">Password</label>
+          <div class="input-field col s12">
+            <input type="password" name="password" id="password" placeholder="Enter your password" required>
+          </div>
+        </div>
+      </div>
+      <button type="submit" class="btn inline-btn login">Log in</button>
+    </form>  
+  </div>
+
+  <footer class="page-footer blue darken-4">
+      <div class="container">
+      © 2022 by Kostiantyn Sakharov
+      <a class="grey-text text-lighten-4 right" href="http://hellraisercw.github.io/">My portfolio</a>
+      </div>
+    </div>
+  </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="appIndex.js"></script>
+</body>
+</html>

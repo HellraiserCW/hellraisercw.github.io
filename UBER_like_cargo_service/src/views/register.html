@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" href="index.css">
+  <title>Sign Up</title>
+</head>
+
+<body>
+  <nav class="blue darken-4">
+    <div class="nav-wrapper">
+      <div class="nav-elements">
+        <a href="./index.html" class="brand-logo">Cargo service</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li>
+            <button class="btn inline-btn"><a href="./index.html">Log in</a></button>
+          </li>
+          <li>
+            <button class="btn inline-btn"><a href="./resetpwd.html">Forgot Password</a></button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <ul id="slide-out" class="sidenav">
+    <li><a href="./index.html">Login</a></li>
+    <li><a href="./resetpwd.html">Forgot password</a></li>
+  </ul>
+  <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons"> </i></a>
+
+  <div class="container">
+    <div class="row">
+      <form class="col s12">
+        <h4>Registration</h4>
+        <div class="row">
+          <label for="first_name">Nickname</label>
+          <div class="input-field col s12">
+            <input placeholder="Nickname" name="nickname" id="nickname" type="text" class="validate">
+          </div>
+        </div>
+        <div class="row">
+          <label for="email">Email</label>
+          <div class="input-field col s12">
+            <input placeholder="Email" name="email" id="email" type="email" class="validate">
+          </div>
+        </div>
+        <div class="row">
+          <label for="password">Password</label>
+          <div class="input-field col s12">
+            <input placeholder="Password" name="password" id="password" type="password" class="validate">
+          </div>
+        </div>
+        <div class="row">
+          <label for="password">Repeat password</label>
+          <div class="input-field col s12">
+            <input placeholder="Repeat password" name="repeat-password" id="repeat-password" type="password" class="validate">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col s12">
+            <p>I am:</p>
+            <p>
+              <label>
+                <input name="role" type="radio" value="DRIVER" />
+                <span>Driver</span>
+              </label>
+            </p>
+            <p>
+              <label class="role">
+                <input name="role" type="radio" value="SHIPPER" />
+                <span>Shipper</span>
+              </label>
+            </p>
+          </div>
+        </div>
+        <button type="submit" class="btn inline-btn register">Sign Up</button>
+      </form>
+    </div>
+  </div>
+
+  <footer class="page-footer blue darken-4">
+      <div class="container">
+      © 2022 by Kostiantyn Sakharov
+      <a class="grey-text text-lighten-4 right" href="http://hellraisercw.github.io/">My portfolio</a>
+      </div>
+    </div>
+  </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="appRegister.js"></script>
+</body>
+</html>
