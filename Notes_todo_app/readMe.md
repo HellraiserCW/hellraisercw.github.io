@@ -1,6 +1,4 @@
-https://github.com/HellraiserCW/hellraisercw.github.io/tree/main/Notes_todo_app
-
-Simple guide to run Notes app:
+Simple guide to run <a href="https://github.com/HellraiserCW/hellraisercw.github.io/tree/main/Notes_todo_app">Notes app</a>:
 
 1. Pull the project.
 2. Move to project folder in console.

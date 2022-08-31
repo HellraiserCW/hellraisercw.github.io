@@ -1,6 +1,4 @@
-https://github.com/HellraiserCW/hellraisercw.github.io/tree/main/UBER_like_cargo_service
-
-How to to run app:  
+How to run <a href="https://github.com/HellraiserCW/hellraisercw.github.io/tree/main/UBER_like_cargo_service">Cargo app</a>:  
 
 1. Pull the project.  
 2. Open console in project folder.  
