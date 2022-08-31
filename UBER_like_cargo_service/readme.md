@@ -7,6 +7,12 @@ How to to run app:
 5.Run "npm start" command.
 6.Open web browser at page "localhost:8080" and enjoy the app!
 
+.env file is required.
+PORT
+MONGO_DB_CONN
+JWT_KEY
+SENDGRID_API_KEY
+
 Main Features:
 UBER like service for freight trucks, in REST style, using MongoDB as database. This service should help regular people to deliver their stuff and help drivers to find loads and earn some money. Application contains 2 roles, driver and shipper.
 
