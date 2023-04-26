@@ -1,0 +1,83 @@
+.promises {
+  min-height: 800px;
+  width: 1160px;
+
+  &__progress-bar {
+    width: 800px;
+    height: 10px;
+    margin: 50px auto;
+    border: 1px solid #CCC;
+    border-radius: 5px;
+    background-color: #FFF;
+  }
+
+  &__bar {
+    width: 100%;
+    height: 100%;
+    background-color: #4D4949;
+    
+    &--empty-bar {
+      transition: 1s;
+      width: 0%;
+    }
+  }
+
+  &__buttons {
+    width: 400px;
+    margin: auto;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  &__articles {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: auto;
+    width: 800px;
+  }
+
+  &__article {
+    transition: 0.5s;
+    width: 800px;
+    display: flex;
+    border: 1px solid #CCC;
+    margin: 20px 0;
+  }
+
+  &__image {
+    transition: 0.5s;
+    width: 300px;
+    height: 150px;
+    padding: 5px 20px 5px 5px;
+  }
+
+  &__data {
+    transition: 0.5s;
+  }
+
+  &__header {
+    min-width: 540px;
+    height: 25px;
+    transition: 0.5s;
+    margin: 5px 5px 20px 0px;
+  }
+
+  &__text {
+    min-width: 540px;
+    height: 100px;
+    transition: 0.5s;
+    margin: 0px 5px 5px 0px;
+  }
+}
+
+.hide {
+  width: 0;
+  height: 0;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+  overflow: hidden;
+}
